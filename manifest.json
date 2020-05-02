@@ -5,7 +5,8 @@
       {
         "matches": ["http://*/*", "https://*/*"],
         "js": [
-          "js/stepNotif.js"
+          "js/stepNotif.js",
+          "js/twentyNotif.js"
         ]
       }
     ],
