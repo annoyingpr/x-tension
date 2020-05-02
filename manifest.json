@@ -2,5 +2,9 @@
     "name": "X-TENSION",
     "version": "1.0",
     "description": "A mental wellness Chrome extension",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
     "manifest_version": 2
   }
