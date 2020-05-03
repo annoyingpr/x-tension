@@ -21,7 +21,7 @@
         "persistent": false
     },
     "browser_action": {
-      "default_icon": "icons8-leaf-64.png",
+      "default_icon": "x-tension_logo.png",
       "default_popup": "popup.html"
     },
     "manifest_version": 2
