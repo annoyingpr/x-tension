@@ -6,12 +6,16 @@
         "matches": ["http://*/*", "https://*/*"],
         "js": [
           "js/stepNotif.js",
-          "js/twentyNotif.js"
+          "js/twentyNotif.js",
+          "js/cookie.js"
         ]
       }
     ],
     "description": "A mental wellness Chrome extension",
-    "permissions": ["storage", "notifications"],
+    "permissions": [
+      "storage", 
+      "notifications"
+    ],
     "background": {
         "scripts": ["js/background.js"],
         "persistent": false
