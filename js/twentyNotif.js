@@ -9,7 +9,7 @@ function sendNotif() {
         options: {
           title: 'X-Tension',
           message: 'Take a break from your screen! Look at something 20 feet away for 20 seconds.',
-          iconUrl: '/icons8-leaf-64.png',
+          iconUrl: '/x-tension_logo.png',
           type: 'basic'
         }
       })

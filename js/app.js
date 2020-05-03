@@ -11,7 +11,7 @@ if (currentD >= startHappyHourD) {
     options: {
       title: 'Hello there!',
       message: 'How great it is!',
-      iconUrl: '/icons8-leaf-64.png',
+      iconUrl: '/x-tension_logo.png',
       type: 'basic'
     }
   });

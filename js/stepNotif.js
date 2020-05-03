@@ -8,7 +8,7 @@ if (currentDateMinutes >= 50 && currentDateMinutes <= 51) {
         options: {
           title: 'X-Tension',
           message: 'Time to walk 250 steps',
-          iconUrl: '/icons8-leaf-64.png',
+          iconUrl: '/x-tension_logo.png',
           type: 'basic'
         }
       });
