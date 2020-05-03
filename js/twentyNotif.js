@@ -1,6 +1,6 @@
-const workStart = new Date().setHours(9,0,0); // 9:00am default work start
-const workEnd = new Date().setHours(17,0,0); // 5:00pm default work end
-const currentTime = new Date();
+const WORK_START = new Date().setHours(9,0,0); // 9:00am default work start
+const WORK_END = new Date().setHours(17,0,0); // 5:00pm default work end
+const CURRENT_TIME = new Date();
 const INTERVAL_TIME = 1200 * 1000; // 20 minute interval
 
 function sendNotif() {
@@ -15,6 +15,12 @@ function sendNotif() {
       })
 }
 
-if ((currentTime >= workStart) && (currentTime <= workEnd)) {
-    setInterval(sendNotif, INTERVAL_TIME);
+if ((CURRENT_TIME >= WORK_START) && (CURRENT_TIME <= WORK_END)) {
+   let notifInterval = setInterval(sendNotif, INTERVAL_TIME);
+   let newTime = new Date();
+   while (newTime <= WORK_END) {
+     newTime = new Date();
+   }
+   clearInterval(notifInterval);
 }
+
