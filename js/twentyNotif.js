@@ -9,7 +9,7 @@ function sendNotif() {
         options: {
           title: 'X-Tension',
           message: 'Take a break from your screen! Look at something 20 feet away for 20 seconds.',
-          iconUrl: '/icon.png',
+          iconUrl: '/icons8-leaf-64.png',
           type: 'basic'
         }
       })
@@ -17,10 +17,6 @@ function sendNotif() {
 
 if ((CURRENT_TIME >= WORK_START) && (CURRENT_TIME <= WORK_END)) {
    let notifInterval = setInterval(sendNotif, INTERVAL_TIME);
-   let newTime = new Date();
-   while (newTime <= WORK_END) {
-     newTime = new Date();
-   }
    clearInterval(notifInterval);
 }
 

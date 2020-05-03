@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid" style="background-image: linear-gradient(-90deg, #ef629f, #eecda3); width: 400px">
+        <div>
+            <h1 style="text-align:center;">X-Tension</h1>
+            <h3 style="text-align:center"><i>Make working from home a breeze!</i></h3>
+        </div>
+        <hr style="background-color: black">
+        <div>
+            <h3 style="text-align:center">"Mental health... is not a destination, but a process. It's about how you
+                drive,
+                not where you're going." - Noam Shpancer, PhD</h3>
+        </div>
+        <hr style="background-color: black">
+        <br>
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyB5Bq-nyJkVPRPz9azCwBDhoC29FeszZ8k",
+                authDomain: "x-tension.firebaseapp.com",
+                databaseURL: "https://x-tension.firebaseio.com/",
+                projectId: "x-tension",
+                storageBucket: "x-tension.appspot.com",
+                messagingSenderId: "18592060718",
+                appId: "1:18592060718:web:4fd7c6ab034860b66956bf",
+                measurementId: "G-SZQ13VE7MP"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+
+            function submit() {
+                console.log('Submit start');
+                var workStartHour = document.getElementById('workStartTime').value;
+                var workEndHour = document.getElementById('workEndTime').value;
+                firebase.database().ref().push({
+                    stepsPerDay: document.getElementById('stepsPerDay').value,
+                    workStartTime: new Date().setHours(workStartHour, 0, 0),
+                    workEndTime: new Date().setHours(workEndHour, 0, 0),
+                });
+                console.log('Submit end');
+            };
+
+        </script>
+        <div class="container">
+            <div class="form-group">
+                <label for="stepsPerDay">How many steps will you walk per day?</label>
+                <input type="text" id="stepsPerDay" class="form-control" placeholder="10000">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="workStartTime">What time do you start work?</label>
+                <input type="text" id="workStartTime" class="form-control" placeholder="9">
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="stepsPerDay">What time do you end work?</label>
+                <input type="text" id="workEndTime" class="form-control" placeholder="17">
+            </div>
+            <br>
+            <button class="btn btn-primary mx-auto" onclick="submit()">Submit</button>
+            <br>
+        </div>
+        <hr>
+        <br>
+        <div class="container">
+            <h2>Ergonomics Tips!</h2>
+            <br>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            1. Keep moving!
+                        </h5>
+                        <p class="card-text"> Regularly vary your body positioning.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            2. Posture
+                        </h5>
+                        <p class="card-text"> Maintain good head and neck posture throughout the day.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            3. Eyes on the prize!
+                        </h5>
+                        <p class="card-text"> Combat eye strain with the 20-20-20 rule.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            4. No slouching allowed!
+                        </h5>
+                        <p class="card-text"> Keep an eye on your back posture, and adjust your chair accordingly.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            5. Arms
+                        </h5>
+                        <p class="card-text"> Make sure that the weight of your arms is supported at all times.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            6. No squinting!
+                        </h5>
+                        <p class="card-text"> Ensure your head and neck aren't "craned" forward to your screen.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            7. Chair placement
+                        </h5>
+                        <p class="card-text"> Move your chair as close to your work as possible to avoid leaning and
+                            reaching.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            8. Looking forward
+                        </h5>
+                        <p class="card-text"> Your monitor should be placed directly in front of you, with the top no
+                            higher than eye level.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            9. Keyboard whereabouts
+                        </h5>
+                        <p class="card-text"> Your keyboard should be directly in front of your monitor.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            10. Feet!
+                        </h5>
+                        <p class="card-text"> Your feet should not be dangling when you are seated. Use a footrest if
+                            neccessary.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            11. Glare be gone
+                        </h5>
+                        <p class="card-text"> Control screen glare by purchasing anti-glare glasses or using
+                            light-filters on your device.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 card">
+                    <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            12. Work hard, play hard
+                        </h5>
+                        <p class="card-text"> Setup different areas in your home for work hours and recreation, and use
+                            them appropriately!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

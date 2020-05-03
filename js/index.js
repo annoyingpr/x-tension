@@ -37,7 +37,7 @@ function getUserInfo(uuid) {
     ref.child(uuid).once('value').then(snap => {
         console.log(`Finished getting info for user ${uuid}`);
         return snap.val();
-    })
+    });
 }
 
 // updateUser('-M6NvyqrcUI8Atj_39pm', 5000, 10, 20);

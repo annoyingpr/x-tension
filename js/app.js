@@ -9,9 +9,9 @@ if (currentD >= startHappyHourD) {
   chrome.runtime.sendMessage('', {
     type: 'notification',
     options: {
-      title: 'PENIS',
+      title: 'Hello there!',
       message: 'How great it is!',
-      iconUrl: '/icon.png',
+      iconUrl: '/icons8-leaf-64.png',
       type: 'basic'
     }
   });
